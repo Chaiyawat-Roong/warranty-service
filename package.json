@@ -16,7 +16,7 @@
     "typescript": "^5.1.6"
   },
   "scripts": {
-    "start": "ts-node-dev src/app.ts",
+    "build": "ts-node-dev src/app.ts",
     "test": "echo \"Error: no test specified\" && exit 1",
     "vercel-build": "echo Hello"
   },
