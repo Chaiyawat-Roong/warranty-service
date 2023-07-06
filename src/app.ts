@@ -12,7 +12,7 @@ const app: express.Application = express();
 
 app.use(bodyParser.json())
 
-// app.use(middle)
+app.use(middle)
 
 app.get('/', (req,res)=> {
     res.send("my api running");
