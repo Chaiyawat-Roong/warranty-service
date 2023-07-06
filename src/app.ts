@@ -26,3 +26,5 @@ const errHandler: ErrorRequestHandler = (err, req, res, next) => {
 
 app.use(errHandler)
 app.listen(port, () => console.log("Server is running!!"))
+
+export default app;
