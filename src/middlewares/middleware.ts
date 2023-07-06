@@ -8,7 +8,7 @@ export const middle: RequestHandler = (req: Request, res: Response, next: NextFu
             next()
         }
         else{
-            res.status(401).json({ message: 'Unauthorized' });
+            res.status(401).json({ message: 'Unauthorized', token: token });
         }
     } else {
         // No Bearer token found in the Authorization header
