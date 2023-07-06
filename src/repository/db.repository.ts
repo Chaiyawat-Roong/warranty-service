@@ -97,7 +97,6 @@ async function deleteById(id: string): Promise<any>{
           ]
       }
       const result: QueryResult = await client.query(query);
-      // console.log(result.rowCount)
       return result.rowCount;
     }catch(err){
       console.log(err)

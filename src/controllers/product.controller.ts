@@ -9,7 +9,6 @@ async function getAllProduct(req: Request, res: Response): Promise<void> {
             message: "Authorized",
             data: result
         })
-        // console.log("text in controller" + result)
     }catch(err){
         console.log(err)
     }
@@ -22,7 +21,6 @@ async function getProduct(req: Request, res: Response): Promise<void> {
             message: "Authorized",
             product:  result.length == 0 ? "ไม่เจอ" : result
         })
-        // console.log("text in controller" + result)
     }catch(err){
         console.log(err)
     }
@@ -30,14 +28,12 @@ async function getProduct(req: Request, res: Response): Promise<void> {
 
 async function addProduct(req: Request, res: Response): Promise<void> {
     try{
-        // const result: string = await findAllProduct()
         const product: Product = req.body
         const result: number = await addProductById(product)
         res.json({
             message: "Authorized",
             data: result == 1 ? "add product success" : "add product fail"
         })
-        // console.log(product)
     }catch(err){
         console.log(err)
     }
