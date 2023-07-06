@@ -14,6 +14,10 @@ app.use(bodyParser.json())
 
 app.use(middle)
 
+app.get('/', (req,res)=> {
+    res.send("my api running");
+})
+
 app.use('/product', router)
 
 const errHandler: ErrorRequestHandler = (err, req, res, next) => {
